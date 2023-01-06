@@ -1,0 +1,36 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <h1 class="display-4 text-white animated slideInDown mb-4">Tulis Cerita</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="/index">Beranda</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="">Tulis Cerita</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container"> <h3>Tuliskan Cerita Kamu</h3></div><br>
+<div class="container">
+    <form action="" method="post" >
+            
+        {% csrf_token %}
+        {{ form.as_p }}
+
+            <div class="col-12">
+                <a href="/datacerita" class="btn btn-secondary">Kembali</a>
+                <button type="submit" class="btn btn-primary" type="submit">Kirim</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact End -->
+
+{% endblock %}

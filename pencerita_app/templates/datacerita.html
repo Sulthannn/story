@@ -1,0 +1,73 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+body {
+    color: #404E67;
+    background: #F5F7FA;
+    font-family: 'Open Sans', sans-serif;
+}
+</style>
+    <br><br><br><br>
+    <div class="container-lg">
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+            <div class="col-sm-12 text-start"><h2>Cerita Anda <b>Story.La</b></h2></div>
+            <div class="col-sm-12 text-end">
+           <a href="/tambahcerita"><button type="button" class="btn btn-info add-new text-end"><i class="fa fa-plus"></i> Tambah Cerita</button></a></div><br><br>                  
+           <table class="table table-bordered">
+                <thead>
+                    <tr style="text-align: center;">
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>Koordinat</th>
+                        <th>Kota</th>
+                        <th>Judul</th>
+                        <th>Cerita</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for karya in penulis %}
+                    <tr>
+                        <td>{{ karya.penulis }}</td>
+                        <td>{{ karya.email }}</td>
+                        <td>{{ karya.koordinat }}</td>
+                        <td>{{ karya.kota }}</td>
+                        <td>{{ karya.judul }}</td>
+                        <td>{{ karya.karangan }}</td>
+                        <td>
+                            <a href="{% url 'update' karya.pk %}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a  href="#" onclick="hapuskarya('{{ karya.pk }}', '{{ karya.penulis }}')" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    function hapuskarya(id, penulis){
+    swal({
+      title: "Apakah Anda Yakin?",
+      text: "Setelah data "  +  penulis  +  " dihapus, data tidak dapat dikembalikan!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Berhasil!", "Data "  +  penulis  +  " Berhasil Dihapus!", "success").then(function(){
+          window.location = "/datacerita/deletecerita/"+id;
+        });
+      }
+    });
+  }
+  </script>
+
+{% endblock %}

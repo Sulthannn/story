@@ -1,0 +1,337 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <!-- Carousel Start -->
+ <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{% static 'regis/img/carousel-1.jpg' %}" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <h1 class="display-2 text-light mb-5 animated slideInDown">Ayo Tingkatkan Literasi Anak Bangsa!</h1>
+                                <a href="" class="btn btn-primary py-sm-3 px-sm-5">Lihat Lebih Banyak</a>
+                                <a href="/login" class="btn btn-light py-sm-3 px-sm-5 ms-3">Masuk</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="{% static 'regis/img/carousel-2.jpg' %}" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <h1 class="display-2 text-light mb-5 animated slideInDown">Tebarkan Hobi Membaca Kamu</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+<!-- Facts Start -->
+<div class="container-fluid facts py-5 pt-lg-0">
+    <div class="container py-5 pt-lg-0">
+        <div class="row gx-4">
+                        <div class="ps-4">  </div>
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                <div class="bg-white shadow d-flex align-items-center h-100 p-4" style="min-height: 150px;">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-lg-square bg-primary">
+                            <i class="fa fa-users text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5>Target</h5>
+                            <span>Story.La diperuntukan untuk semua kalangan dari anak-anak hingga dewasa yang memiliki minat baca yang tinggi.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                <div class="bg-white shadow d-flex align-items-center h-100 p-4" style="min-height: 150px;">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0 btn-lg-square bg-primary">
+                            <i class="fa fa-file-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5>Story.La</h5>
+                            <span>Sebuah Webisite yang diciptakan untuk menarik minat masyarakat dalam literasi.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Facts End -->
+
+
+<!-- About Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'regis/img/buku2.jpg' %}" alt="" style="object-fit: cover;">
+                    <img class="position-absolute top-0 start-0 bg-white pe-3 pb-3" src="{% static 'regis/img/buku.jpg' %}" alt="" style="width: 200px; height: 200px;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="h-100">
+                    <h6 class="text-primary text-uppercase mb-2">TENTANG</h6>
+                    <h1 class="display-6 mb-4">Story.LA - Membaca dan Menulis Cerita</h1>
+                    <p>Story.La merupakan website yang diciptakan untuk meningkatkan literasi masyarakat, karena tingkat literasi masyarakat di Indonesia masih sedikit. Tidak hanya membaca, Story.La juga dapat dimanfaatkan unutk menulis cerita secara Online. </p>
+                    <p class="mb-4">Berbagai jenis macam bacaan yang ada di Story.La ini, yaitu sebagai berikut:</p>
+                    <div class="row g-2 mb-4 pb-2">
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Inspiratif
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Komedi
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Romansa
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="fa fa-check text-primary me-2"></i>Horror
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <a class="btn btn-primary py-3 px-5" href="">Baca Selengkapnya</a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="d-inline-flex align-items-center btn btn-outline-primary border-2 p-2" href="tel:+0123456789">
+                                <span class="flex-shrink-0 btn-square bg-primary">
+                                    <i class="fa fa-phone-alt text-white"></i>
+                                </span>
+                                <span class="px-3">+62 89653986092</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Courses Start -->
+<div class="container-xxl courses my-6 py-6 pb-0">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h6 class="text-primary text-uppercase mb-2">Lihat Disini</h6>
+            <h1 class="display-6 mb-4">Buku yang tersedia</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                    <div class="text-center p-4 pt-0">
+                        <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">Inspiratif</div>
+                        <h5 class="mb-3">Apa dan Bagaimana Kick Andy?</h5>
+                        <p>Pada mulanya  Kick  Andy  hanya  sebuah  wacana  dan  ke-rinduan  bos  Metro  TV  Surya  Paloh  yang  ingin  mendaya-gunakan kemampuan Andy Noya untuk tampil seperti apa adanya di layar kaca</p>
+                    </div>
+                    <div class="position-relative mt-auto">
+                        <img class="img-fluid" src="{% static 'regis/img/kickandy.png' %}" alt="">
+                        <div class="courses-overlay">
+                            <a class="btn btn-outline-primary border-2" href="https://adoc.pub/kumpulan-kisah-inspiratif.html">Baca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                    <div class="text-center p-4 pt-0">
+                        <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">Komedi</div>
+                        <h5 class="mb-3">Si Juki Anak Kos!</h5>
+                        <p>Lika-liku anak kos yang kocak! Komik asli Indonesia yang mengisahkan pahit manisnya kehidupan anak kos. Penuh canda dan tawa dengan selipan kritik tentang isu yang sedang hangat saat ini.</p>
+                    </div>
+                    <div class="position-relative mt-auto">
+                        <img class="img-fluid" src="{% static 'regis/img/sijuki.png' %}" alt="">
+                        <div class="courses-overlay">
+                            <a class="btn btn-outline-primary border-2" href="https://www.webtoons.com/id/comedy/si-juki/list?title_no=447&page=6">Baca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                    <div class="text-center p-4 pt-0">
+                        <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">Romansa</div>
+                        <h5 class="mb-3">Dilan</h5>
+                        <p>Aku tidak jadi nelepon Si Komar, tapi sudah membaca dua buku yang ditulis oleh Pidi Baiq, judulnya "Dilan,. Dia adalah Dilanku Tahun 1990"</p>
+                    </div>
+                    <div class="position-relative mt-auto">
+                        <img class="img-fluid" src="{% static 'regis/img/dilan.png' %}" alt="">
+                        <div class="courses-overlay">
+                            <a class="btn btn-outline-primary border-2" href="https://ia600109.us.archive.org/35/items/Dilan1991/Dilan%201991.pdf">Baca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 my-6 mb-0 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-primary text-start p-5">
+                    <h1 class="mb-4">Ayo Beri Penilaian!</h1>
+                    <form action="" method="post" enctype="multipart/form-data">
+            
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                            <div class="col-12">
+                                <button class="btn btn-dark w-100 py-3" type="submit">Kirim</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Courses End -->
+
+
+<!-- Features Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-primary text-uppercase mb-2">Tentang Story.La</h6>
+                <h1 class="display-6 mb-4">Membaca dengan nyaman di Story.La</h1>
+                <p class="mb-5">Story.La merupakan website yang diciptakan untuk meningkatkan literasi masyarakat, karena tingkat literasi masyarakat di Indonesia masih sedikit. Tidak hanya membaca, Story.La juga dapat dimanfaatkan unutk menulis cerita secara Online.</p>
+                <div class="row gy-5 gx-4">
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0 btn-square bg-primary me-3">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <h5 class="mb-0">Inspiratif</h5>
+                        </div>
+                        <span>Buku inspiratif adalah buku yang menceritakan cerita kisah perjuangan seorang anak menempuh pendidikan, tentang kisah sukses seorang yang berjuang dan mencapai keberhasilan, dan lain sebagainya</span>
+                    </div>
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0 btn-square bg-primary me-3">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <h5 class="mb-0">Komedi</h5>
+                        </div>
+                        <span>Buku komedi adalah buku dengan genre lucu atau komedi, dibuat dengan gaya bahasa yang mudah dipahami, dengan alur yang menarik dan mudah diikuti.</span>
+                    </div>
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0 btn-square bg-primary me-3">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <h5 class="mb-0">Romansa</h5>
+                        </div>
+                        <span>Buku Romantis merupakan buku yang menceritakan tentang kisah cinta dan kasih sayang yang terjalin antara tokoh-tokoh di dalamnya</span>
+                    </div>
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0 btn-square bg-primary me-3">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <h5 class="mb-0">Horror</h5>
+                        </div>
+                        <span>Buku Horror menyajikan berbagai kisah seram dan misteri yang akan membuat pembaca penasaran dan terbawa suasana hingga merasa merinding dan ketakutan.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="position-relative overflow-hidden pe-5 pt-5 h-100" style="min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'regis/img/buku2.jpg' %}" alt="" style="object-fit: cover;">
+                    <img class="position-absolute top-0 end-0 bg-white ps-3 pb-3" src="{% static 'regis/img/buku.jpg' %}" alt="" style="width: 200px; height: 200px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+
+<!-- Team Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h6 class="text-primary text-uppercase mb-2">Admin</h6>
+            <h1 class="display-6 mb-4">Admin kami yang mengelola</h1>
+        </div>
+        <div class="row g-0 team-items">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item position-relative">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="{% static 'regis/img/admin1.jpeg' %}" alt="">
+                        <div class="team-social text-center">
+                            <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="mt-2">Nabila Sukma M</h5>
+                        <span>2104888</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h6 class="text-primary text-uppercase mb-2">Testimonial</h6>
+            <h1 class="display-6 mb-4">apa kata pelanggan kami!</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+               
+                <div class="owl-carousel testimonial-carousel">
+                    {% for nilai in berita %}
+                    <div class="testimonial-item text-center">
+                        <div class="position-relative mb-5">
+                            {% if nilai.gambar %}
+                            <img class="img-fluid rounded-circle mx-auto" src="{{nilai.gambar.url}}" alt="">
+                            {% endif %}
+                            <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                <i class="fa fa-quote-left fa-2x text-primary"></i>
+                            </div>
+                        </div>
+                        <p class="fs-4">{{ nilai.komentar }}.</p>
+                        <hr class="w-25 mx-auto">
+                        <h5>{{ nilai.nama }}</h5>
+                        <h6>{{ nilai.email }}</h6>
+                        <span>{{ nilai.status_id }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+
+{% endblock %}

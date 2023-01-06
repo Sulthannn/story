@@ -1,0 +1,56 @@
+{% extends 'base3.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+<meta http-equiv="refresh" content="0; url={% url 'datacerita' %}">
+{% else %}     
+   <!-- Page Header Start -->
+    <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <h1 class="display-4 text-white animated slideInDown mb-4">Story.La</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="/index">Beranda</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="">Masuk Story.La</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->  
+    
+
+    <section class="h-100 bg-dark">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card card-registration my-4">
+                <div class="row g-0">
+                  <div class="col-xl-6 d-none d-xl-block">
+                    <img src="{% static 'regis/img/registrasi.jpg' %}"
+                      alt="Sample photo" class="img-fluid"
+                      style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="card-body p-md-5 text-black">
+                      <h3 class="mb-5 text-uppercase">Masuk <b>Story.La</b></h3>
+      
+                      <form  method="post">
+                        {% csrf_token %}
+                        
+                        {{ form.as_p }}
+
+                      <p class="mb-4">Anda belum mendaftar? Daftar terlebih dahulu  <a href="/registrasi">Daftar</a></p>
+                      <div class="d-flex justify-content-end pt-3">
+                        <button type="submit" class="btn btn-warning btn-lg ms-2">Masuk</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+}	#map {
+    height: 500px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+</style>
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center">
+        <h1 class="display-4 text-white animated slideInDown mb-4">Tuliskan Karya Anda di Story.La</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a class="text-white" href="/index">Beranda</a></li>
+                <li class="breadcrumb-item text-primary active" aria-current="">Menulis Cerita</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->  
+<!-- Contact Start -->
+<div class="container-xxl py-6">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 450px;">
+                <div class="position-relative h-100" id ="map">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <h6 class="text-primary text-uppercase mb-2">Tulis cerita</h6>
+                <h1 class="display-6 mb-4">Kreasikan karya anda!</h1>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="mb-4">Anda suka membuat cerita? tuliskan karya anda di Stoty.La. Namun sebelum itu anda harus melakukan login terlebih dahulu.  <a href="/tambahcerita">Masuk</a></p>
+                    <form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Contact End -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script>
+	const map = L.map('map').setView([-1.4050317457438009, 117.81185115366911], 4.5);
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+{% for karya in penulis %}
+
+var table = '<table><tr><td>Kota</td><td>:</td> <td> {{ karya.kota }}</td></tr>';
+table += '<tr><td>Penulis</td><td>:</td> <td> {{ karya.penulis }}</td></tr><tr><td>Judul</td><td>:</td> <td> {{ karya.judul }}</td></tr><tr><td>Cerita</td><td>:</td> <td> {{ karya.karangan}}</td></tr></table>';
+var marker=  L.marker([{{ karya.koordinat }}]).addTo(map);
+marker.bindPopup(table);
+
+  {% endfor %}
+    
+</script>
+
+{% endblock %}
